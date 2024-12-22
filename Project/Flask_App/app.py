@@ -13,7 +13,7 @@ def index():
 
 @app.route('/data_predict', methods=['GET', 'POST'])
 def predict():
-    model = pickle.load(open('E:\Projects\Flask (Projects)\Wine_Quality_Test_Project (Flask)\Project\Training\wineQuality_new.pkl', 'rb'))
+    model = pickle.load(open(Provide the directory path for the "WineQuality_New.pkl" here, Example:- "C(Your_Drive_Name):\Your_Folder_Name(s)\Training\WineQuality_New.pkl', 'rb'))
     data = [[x for x in request.form.values()]]
     pred = model.predict(data)[0]
     print(pred)
